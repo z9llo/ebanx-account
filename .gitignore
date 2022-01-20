@@ -24,3 +24,7 @@ hs_err_pid*
 
 # Project exclude paths
 /account-api/target/
+
+#intellij files
+/.idea
+*.iml
