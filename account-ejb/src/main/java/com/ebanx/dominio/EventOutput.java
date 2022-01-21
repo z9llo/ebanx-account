@@ -1,8 +1,16 @@
 package com.ebanx.dominio;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+
+import javax.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement
 public class EventOutput {
 
+    @JsonInclude(JsonInclude.Include.NON_NULL)
     private Account origin;
+
+    @JsonInclude(JsonInclude.Include.NON_NULL)
     private Account destination;
 
     public EventOutput() {

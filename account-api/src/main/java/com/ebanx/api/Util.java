@@ -1,14 +1,20 @@
 package com.ebanx.api;
 
-import jakarta.ws.rs.GET;
+import com.ebanx.negocio.AccountService;
+import jakarta.inject.Inject;
+import jakarta.ws.rs.POST;
 import jakarta.ws.rs.Path;
+import jakarta.ws.rs.core.Response;
 
 @Path("/")
 public class Util {
 
+    @Inject
+    private AccountService accountService;
+
     @Path("reset")
-    @GET
-    public String reset() {
-        return "";
+    @POST
+    public Response reset() {
+        return Response.ok().build();
     }
 }

@@ -12,7 +12,6 @@ public class AccountService {
     static final ArrayList<Account> accounts = new ArrayList<>();
 
     public AccountService() {
-        accounts.add(new Account(100L, 20L));
         accounts.add(new Account(300L, 0L));
     }
 
@@ -53,6 +52,7 @@ public class AccountService {
         Account account = getAccount(event.getDestination());
         if (account == null) {
             account = new Account(event.getDestination(), event.getAmount());
+            accounts.add(account);
         } else {
             account.deposit(event.getAmount());
         }
