@@ -52,4 +52,12 @@ public class Account {
     public void setBalance(Long balance) {
         this.balance = balance;
     }
+
+    public void deposit(Long value) {
+        this.balance = this.balance + value;
+    }
+
+    public void withdraw(Long value) {
+        this.balance = this.balance - value;
+    }
 }
