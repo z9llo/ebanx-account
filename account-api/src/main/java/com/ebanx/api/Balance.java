@@ -20,7 +20,7 @@ public class Balance {
         Long balance = this.accountService.getBalance(accountId);
 
         if (balance == null) {
-            return Response.status(Response.Status.NOT_FOUND).build();
+            return Response.status(Response.Status.NOT_FOUND).entity(0).build();
         }
 
         return Response.ok(balance).build();

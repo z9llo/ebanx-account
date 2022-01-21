@@ -2,7 +2,7 @@ package com.ebanx.dominio;
 
 public class Account {
 
-    private Long id;
+    private String id;
     private Long balance;
 
     public Account() {
@@ -10,11 +10,11 @@ public class Account {
     }
 
     public Account(Long id) {
-        this.id = id;
+        this.id = id.toString();
     }
 
     public Account(Long id, Long balance) {
-        this.id = id;
+        this.id = id.toString();
         this.balance = balance;
     }
 
@@ -37,11 +37,11 @@ public class Account {
         return super.hashCode();
     }
 
-    public Long getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(String id) {
         this.id = id;
     }
 

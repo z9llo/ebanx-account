@@ -15,6 +15,7 @@ public class Util {
     @Path("reset")
     @POST
     public Response reset() {
-        return Response.ok().build();
+        String ok = "OK";
+        return Response.ok(ok).build();
     }
 }
